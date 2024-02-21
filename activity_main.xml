@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00E5FF">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#76FF03"
+        android:backgroundTint="#00E676"
+        android:text="CALCULATOR"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:gravity="right"
+        android:hint="0"
+        android:inputType="text"
+        android:textSize="20sp"
+        tools:ignore="Autofill,DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+    <GridLayout
+        android:id="@+id/digitsGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/display"
+        android:layout_marginTop="8dp"
+        android:columnCount="3">
+
+        <!-- Digits Buttons -->
+        <Button
+            android:id="@+id/digit1"
+            android:backgroundTint="#3D5AFE"
+            android:text="1"
+            tools:ignore="HardcodedText" />
+
+
+        <Button
+            android:id="@+id/digit2"
+            android:backgroundTint="#FF9100"
+            android:text="2"
+            tools:ignore="HardcodedText" />
+
+
+        <Button
+            android:id="@+id/digit3"
+            android:backgroundTint="#FF1744"
+            android:text="3"
+            tools:ignore="HardcodedText" />
+
+
+        <Button
+            android:id="@+id/digit4"
+            android:backgroundTint="#FFC400"
+            android:text="4"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/digit5"
+            android:backgroundTint="#00E676"
+            android:text="5"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/digit6"
+            android:backgroundTint="#F50057"
+            android:text="6"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/digit7"
+            android:backgroundTint="#00796B"
+            android:text="7"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/digit8"
+            android:backgroundTint="#303F9F"
+            android:text="8"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/digit9"
+            android:text="9"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/digit0"
+            android:backgroundTint="#FFEA00"
+            android:text="0"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/decimalPoint"
+            android:backgroundTint="#FF3D00"
+            android:text="."
+            tools:ignore="HardcodedText" />
+    </GridLayout>
+
+    <!-- Operator Buttons -->
+    <LinearLayout
+        android:id="@+id/operatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/digitsGridLayout"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/operatorMinus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#2979FF"
+            android:text="-"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/operatorPlus"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/operatorMultiply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF3D00"
+            android:text="*"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/operatorDivide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="/"
+            tools:ignore="ButtonStyle,HardcodedText" />
+    </LinearLayout>
+
+    <!-- Equals Button -->
+    <Button
+        android:id="@+id/equalsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/operatorLayout"
+        android:backgroundTint="#FF1744"
+        android:text="="
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <!-- Clear Button -->
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/equalsButton"
+        android:backgroundTint="#76FF03"
+        android:text="C"
+        android:textColor="#F50057"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+</RelativeLayout>
